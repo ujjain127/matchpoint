@@ -1,0 +1,202 @@
+.facilities-page {
+  padding: 2rem;
+  background-color: var(--background-color);
+  min-height: calc(100vh - 64px);
+}
+
+.facilities-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.facilities-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.facilities-header p {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.sports-filter {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+.filter-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 120px;
+}
+
+.filter-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.filter-btn.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.facility-card {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.facility-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.facility-image {
+  position: relative;
+  height: 200px;
+}
+
+.facility-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.facility-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-color);
+  color: white;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+}
+
+.facility-content {
+  padding: 1.5rem;
+}
+
+.facility-content h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.facility-description {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.facility-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-color);
+}
+
+.detail-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-color);
+}
+
+.facility-features {
+  margin-bottom: 1.5rem;
+}
+
+.facility-features h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.facility-features ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.facility-features li {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.facility-features li::before {
+  content: "✓";
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.facilities-loading,
+.facilities-error {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-color);
+}
+
+.facilities-error {
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  .facilities-page {
+    padding: 1rem;
+  }
+
+  .facilities-header h1 {
+    font-size: 2rem;
+  }
+
+  .sports-filter {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.5rem 1rem;
+    min-width: auto;
+    font-size: 0.9rem;
+  }
+
+  .facility-features ul {
+    grid-template-columns: 1fr;
+  }
+} 

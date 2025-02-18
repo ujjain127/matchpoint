@@ -1,0 +1,70 @@
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.time-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.time-slot:not(:disabled):hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.time-slot.selected {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+}
+
+.time-slot.selected .slot-icon {
+  color: white;
+}
+
+.time-slot.booked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f3f4f6;
+}
+
+.slot-icon {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.slot-time {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.slot-status {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.loading-slots,
+.no-slots {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+}
+
+.loading-slots {
+  color: var(--accent-color);
+} 

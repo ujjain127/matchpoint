@@ -1,0 +1,135 @@
+.booking-calendar {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  width: 100%;
+}
+
+.rdp {
+  margin: 0;
+  width: 100%;
+}
+
+.rdp-month {
+  width: 100%;
+}
+
+.rdp-cell {
+  height: 40px;
+}
+
+.rdp-head_cell {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: var(--accent-color) !important;
+  color: white;
+  opacity: 0.8;
+}
+
+.rdp-day_selected {
+  background-color: var(--accent-color) !important;
+  color: white;
+}
+
+.rdp-day_selected:hover {
+  background-color: var(--accent-color) !important;
+  opacity: 0.9;
+}
+
+.rdp-day_disabled {
+  opacity: 0.25;
+}
+
+.DayPicker {
+  font-size: 1rem;
+}
+
+.DayPicker-wrapper {
+  padding-bottom: 0;
+}
+
+.DayPicker-Month {
+  margin: 0;
+}
+
+.DayPicker-Day {
+  padding: 0.5rem;
+  border-radius: var(--border-radius) !important;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  background-color: var(--accent-color) !important;
+  color: white;
+}
+
+.DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  background-color: var(--accent-color) !important;
+  opacity: 0.8;
+}
+
+.DayPicker-Day--today {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.DayPicker-Day--disabled {
+  color: #dce0e0;
+}
+
+.custom-calendar {
+  width: 100% !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+.react-datepicker {
+  width: 100% !important;
+  font-family: inherit !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.react-datepicker__month-container {
+  width: 100% !important;
+}
+
+.react-datepicker__header {
+  background-color: var(--primary-color) !important;
+  border-bottom: none !important;
+  padding: 1rem !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+  font-weight: 500 !important;
+  font-size: 1.1rem !important;
+}
+
+.react-datepicker__day-name {
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+.react-datepicker__day {
+  width: 2.5rem !important;
+  line-height: 2.5rem !important;
+  margin: 0.2rem !important;
+  border-radius: var(--border-radius) !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: var(--accent-color) !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #ccc !important;
+} 
