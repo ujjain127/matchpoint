@@ -93,7 +93,11 @@ npm start
 
 ## 📱 Screenshots
 
-[Add screenshots of your application here]
+![image](https://github.com/user-attachments/assets/3690080c-08de-4e16-af15-1660036ecef1)
+![image](https://github.com/user-attachments/assets/96d7c9c5-e0ca-44eb-8824-41f1af541302)
+![image](https://github.com/user-attachments/assets/5949a7a6-f31a-4306-ae45-bb3ae4804cc1)
+
+
 
 ## 🚀 Deployment
 
@@ -130,9 +134,6 @@ Required environment variables:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👥 Authors
-
-- Your Name - Initial work - [YourGitHub](https://github.com/yourusername)
 
 ## 🙏 Acknowledgments
 
@@ -142,7 +143,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-For support, email your-email@example.com or create an issue in the repository.
+For support, email ujjainsriganesh@gmail.com or create an issue in the repository.
 
 ## 🔮 Future Features
 
