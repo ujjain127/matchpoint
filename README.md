@@ -51,7 +51,7 @@ MatchPoint is a modern web application that simplifies the process of booking sp
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/matchpoint.git
+git clone https://github.com/ujjain127/matchpoint.git
 cd matchpoint
 ```
 
