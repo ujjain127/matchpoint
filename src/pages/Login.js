@@ -3,12 +3,14 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { LockClosedIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import './Auth.css';
 import { auth } from '../services/api';
+import { useAuth } from '../context/AuthContext';
 
 function Login() {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from || '/book';
   const selectedFacility = location.state?.selectedFacility;
+  const { login } = useAuth();
 
   const [formData, setFormData] = useState({
     email: '',
@@ -32,17 +34,14 @@ function Login() {
 
     try {
       const response = await auth.login(formData);
-      console.log('Login successful:', response.data);
       
       // Store token and user data
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('user', JSON.stringify(response.data.user));
 
-      // Navigate with the selected facility
-      navigate(from, { 
-        state: { selectedFacility: selectedFacility },
-        replace: true 
-      });
+      // Use the login function from context and navigate to home
+      login(response.data.user, response.data.token);
+      navigate('/', { replace: true }); // Changed from /dashboard to /
     } catch (err) {
       console.error('Login error:', err);
       setError(

@@ -2,14 +2,14 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { HomeIcon, CalendarIcon, MapIcon, PhoneIcon } from '@heroicons/react/24/outline';
 import './Navbar.css';
+import { useAuth } from '../context/AuthContext';
 
-function Navbar() {
+const Navbar = () => {
+  const { isAuthenticated, logout } = useAuth();
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem('user'));
 
   const handleLogout = () => {
-    localStorage.removeItem('token');
-    localStorage.removeItem('user');
+    logout();
     navigate('/login');
   };
 
@@ -28,16 +28,16 @@ function Navbar() {
           <Link to="/book"><CalendarIcon className="nav-icon" />Book Turf</Link>
           <Link to="/facilities"><MapIcon className="nav-icon" />Facilities</Link>
           <Link to="/contact"><PhoneIcon className="nav-icon" />Contact</Link>
-          {user && (
+          {isAuthenticated && (
             <Link to="/profile/bookings" className="nav-link">
               My Bookings
             </Link>
           )}
         </div>
         <div className="auth-buttons">
-          {user ? (
+          {isAuthenticated ? (
             <>
-              <span className="user-name">Hi, {user.name}</span>
+              <span className="user-name">Hi, {JSON.parse(localStorage.getItem('user')).name}</span>
               <button className="btn-secondary" onClick={handleLogout}>
                 Logout
               </button>
@@ -52,6 +52,6 @@ function Navbar() {
       </div>
     </nav>
   );
-}
+};
 
 export default Navbar; 

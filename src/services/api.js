@@ -3,8 +3,12 @@ import axios from 'axios';
 // Check if we're in development
 const isDevelopment = process.env.NODE_ENV === 'development';
 
+const API_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://your-backend-url.com/api' 
+  : 'http://localhost:5000/api';
+
 const api = axios.create({
-  baseURL: isDevelopment ? 'http://127.0.0.1:5000/api' : '/api',
+  baseURL: API_URL,
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
